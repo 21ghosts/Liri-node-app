@@ -16,7 +16,10 @@ function twitter(inputs) {
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
         if (!error) {
             for (i = 0; i < tweets.length; i++) {
+
+                console.log("-------------------------")
                 console.log("Tweet: " + "'" + tweets[i].text + "'" + " Created At: " + tweets[i].created_at);
+                console.log("-------------------------")
             }
         } else {
             console.log(error);
